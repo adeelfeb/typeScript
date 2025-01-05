@@ -32,4 +32,32 @@ const user = new User("john_doe", "password123", new Date());
 user.display();
 // console.log(user.password);  // Accessing password through the getter
 
+
+
+
+type UserType = {
+    username: string;
+    readonly createdAt: Date;
+    getPassword(): string;
+};
+
+class User2 implements UserType {
+    private _password: string;
+
+    constructor(
+        public username: string,
+        password: string,
+        readonly createdAt: Date
+    ) {
+        this._password = password;
+    }
+
+    getPassword(): string {
+        return this._password;
+    }
+}
+
+const user2 = new User2("john_doe", "password123", new Date());
+console.log(user2.getPassword()); // Access via method
+
 export {}

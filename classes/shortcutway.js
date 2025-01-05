@@ -23,4 +23,16 @@ var User = /** @class */ (function () {
 }());
 var user = new User("john_doe", "password123", new Date());
 user.display();
-console.log(user.password); // Accessing password through the getter
+var User2 = /** @class */ (function () {
+    function User2(username, password, createdAt) {
+        this.username = username;
+        this.createdAt = createdAt;
+        this._password = password;
+    }
+    User2.prototype.getPassword = function () {
+        return this._password;
+    };
+    return User2;
+}());
+var user2 = new User2("john_doe", "password123", new Date());
+console.log(user2.getPassword()); // Access via method
