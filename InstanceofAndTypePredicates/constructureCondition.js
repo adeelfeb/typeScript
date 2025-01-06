@@ -1,6 +1,7 @@
-var MyPet = /** @class */ (function () {
+"use strict";
+class MyPet {
     // Single constructor that can handle individual values or an object
-    function MyPet(nameOrAnimal, isCarnivour) {
+    constructor(nameOrAnimal, isCarnivour) {
         if (typeof nameOrAnimal === "string") {
             // If individual values are provided
             this.name = nameOrAnimal;
@@ -12,14 +13,13 @@ var MyPet = /** @class */ (function () {
             this.isCarnivour = nameOrAnimal.isCarnivour;
         }
     }
-    return MyPet;
-}());
+}
 // Example Usage
-var lion = { name: "Leo", isCarnivour: true };
-var goat = { name: "Billy", isCarnivour: false };
+const lion = { name: "Leo", isCarnivour: true };
+const goat = { name: "Billy", isCarnivour: false };
 // Create instances using individual values
-var pet1 = new MyPet("Tim", true);
-console.log("".concat(pet1.name, " is carnivorous: ").concat(pet1.isCarnivour)); // Output: Tim is carnivorous: true
+const pet1 = new MyPet("Tim", true);
+console.log(`${pet1.name} is carnivorous: ${pet1.isCarnivour}`); // Output: Tim is carnivorous: true
 // Create instances using an object
-var pet2 = new MyPet(goat);
-console.log("".concat(pet2.name, " is carnivorous: ").concat(pet2.isCarnivour)); // Output: Billy is carnivorous: false
+const pet2 = new MyPet(goat);
+console.log(`${pet2.name} is carnivorous: ${pet2.isCarnivour}`); // Output: Billy is carnivorous: false

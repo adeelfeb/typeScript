@@ -1,8 +1,9 @@
-var myCar = {
+"use strict";
+const myCar = {
     make: "Toyota",
     model: "Corolla",
 };
-var myTruck = {
+const myTruck = {
     make: "Ford",
     capacity: 5,
 };
@@ -19,9 +20,9 @@ function displayInfo(input) {
 }
 displayInfo("Hello, TypeScript!"); // Output: Input is a string: Hello, TypeScript!
 displayInfo(100); // Output: Input is a number: 100
-var mixedArray = ["Hello", 42, "World", 100];
+let mixedArray = ["Hello", 42, "World", 100];
 // You can access values in the array and the type will be either string or number
-mixedArray.forEach(function (item) {
+mixedArray.forEach(item => {
     if (typeof item === "string") {
         console.log("String item: " + item);
     }

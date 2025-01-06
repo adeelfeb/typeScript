@@ -1,3 +1,4 @@
+"use strict";
 // This function takes a message and throws an error with that message
 // It is typed with 'never' to indicate that the function will never return
 function throwError(message) {

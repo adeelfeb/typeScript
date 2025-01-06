@@ -1,16 +1,20 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var Joe = {
+const Joe = {
     email: "h2asdr.com",
     age: 32,
     dbId: "684",
     houseAddress: "north south east west",
-    getVideoDetails: function () {
+    phoneNumber: "123-456-7890",
+    premiumMember: true,
+    getFullName: () => {
+        return "Joe Doe";
+    },
+    getVideoDetails: () => {
         return "Got it now";
     },
-    getCoupon: function () {
+    getCoupon: () => {
         return 2;
     }
 };
-console.log("the User is:", Joe.getVideoDetails());
-console.log("the User is:", Joe.getCoupon(""));
+console.log("The User is:", Joe.getFullName());
+console.log("The Coupon is:", Joe.getCoupon("SAVE20"));

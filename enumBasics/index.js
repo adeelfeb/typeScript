@@ -1,3 +1,4 @@
+"use strict";
 // Enum for User Roles
 var Role;
 (function (Role) {
@@ -6,24 +7,24 @@ var Role;
     Role["Student"] = "Student";
 })(Role || (Role = {}));
 // Creating Users with different roles
-var user1 = {
+const user1 = {
     name: "Alice",
     age: 30,
     role: Role.Admin
 };
-var user2 = {
+const user2 = {
     name: "Bob",
     age: 25,
     role: Role.Teacher
 };
-var user3 = {
+const user3 = {
     name: "Charlie",
     age: 20,
     role: Role.Student
 };
 // Function to display user information based on their role
 function displayUserInfo(user) {
-    console.log("".concat(user.name, ", Age: ").concat(user.age, ", Role: ").concat(user.role));
+    console.log(`${user.name}, Age: ${user.age}, Role: ${user.role}`);
 }
 // Displaying users' information
 displayUserInfo(user1); // Alice, Age: 30, Role: Admin
