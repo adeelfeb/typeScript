@@ -1,18 +1,7 @@
-let str = "hello there";
-
-let str2 = ""
-
-let str3 = str.split()
-let str5 = str3.reverse()
-let str4 = str3.join("")
-
-for (let index = str.length-1; index >= 0; index--) {
-    str2 += str[index]
-    
-}
-const array = [str]
-
-console.log("new string:", str5)
-console.log("new string:", str3)
-console.log("new string:", str4)
-console.log("new string:", array)
+"use strict";
+let str = "hello world";
+const reverseString = (stringto) => {
+    let newString = stringto.split("").reverse().join("");
+    return newString;
+};
+console.log("Here is the string:", reverseString("hello ther now"));
